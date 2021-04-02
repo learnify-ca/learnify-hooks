@@ -1,0 +1,55 @@
+{
+	"name": "@learnify/hooks",
+	"version": "1.0.0",
+	"description": "Common utility hooks shared by the Learnify team",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "npm run clean && npm run build:types && npm run build:js",
+		"build:types": "tsc --emitDeclarationOnly",
+		"build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+		"clean": "rimraf lib",
+		"compile": "babel src --out-dir ./ --ignore 'src /**/*.test.tsx'",
+		"docs:clean": "rimraf docs",
+		"docs:read": "open ./docs/index.html",
+		"docs:write": "npm run docs:clean && typedoc --out docs src --excludeNotDocumented",
+		"prepublish": "npm run build",
+		"test": "jest",
+		"type-check": "tsc --noEmit",
+		"type-check:watch": "npm run type-check -- --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/learnify-ca/learnify-hooks.git"
+	},
+	"keywords": [
+		"Learnify",
+		"hooks"
+	],
+	"author": "Richard Antao",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/learnify-ca/learnify-hooks/issues"
+	},
+	"homepage": "https://github.com/learnify-ca/learnify-hooks#readme",
+	"devDependencies": {
+		"@babel/cli": "^7.13.14",
+		"@babel/core": "^7.13.14",
+		"@babel/preset-env": "^7.13.12",
+		"@babel/preset-typescript": "^7.13.0",
+		"@types/node": "^14.14.37",
+		"@types/react": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^4.20.0",
+		"@typescript-eslint/parser": "^4.20.0",
+		"eslint": "^7.23.0",
+		"eslint-plugin-react": "^7.23.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"jest": "^26.6.3",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^26.5.4",
+		"typedoc": "^0.20.34",
+		"typescript": "^4.2.3"
+	},
+	"dependencies": {
+		"react": "^17.0.2"
+	}
+}

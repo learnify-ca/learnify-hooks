@@ -1,0 +1,8 @@
+docs
+node_modules
+.eslintrc.js
+babel.config.js
+jest.config.ts
+LICENSE.md
+README.md
+tsconfig.json
