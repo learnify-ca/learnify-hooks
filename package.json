@@ -1,7 +1,7 @@
 {
 	"name": "@learnify/hooks",
 	"version": "1.0.0",
-	"description": "Common utility hooks shared by the Learnify team",
+	"description": "Hooks for common use cases in React",
 	"main": "lib/index.js",
 	"scripts": {
 		"build": "npm run clean && npm run build:types && npm run build:js",
@@ -50,6 +50,7 @@
 		"typescript": "^4.2.3"
 	},
 	"dependencies": {
-		"react": "^17.0.2"
+		"react": "^17.0.2",
+		"redux": "^4.0.5"
 	}
 }
