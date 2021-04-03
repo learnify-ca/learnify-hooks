@@ -1,6 +1,6 @@
 {
 	"name": "@learnify/hooks",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Hooks for common use cases in React",
 	"main": "lib/index.js",
 	"scripts": {
